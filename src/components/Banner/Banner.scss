@@ -1,0 +1,75 @@
+$details-font-size: 34px;
+
+@mixin details-font-props($font-size: $details-font-size) {
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: $font-size;
+    color: white;
+}
+
+.banner-wrapper__info {
+    margin-top: 80px;
+
+    .info__text {
+        gap: 40px;
+        h1 {
+            font-family: "PeckhamPress";
+            font-size: 58px;
+            line-height: 107%;
+        }
+        p {
+            font-style: 18px;
+            line-height: 161%;
+            color: #808080;
+            width: 65%;
+        }
+        .text__details {
+            gap: 20px;
+            .details__detail {
+                .amount {
+                    max-height: $details-font-size +
+                        calc($details-font-size / 2);
+                    display: flex;
+                    align-items: flex-start;
+                    overflow: hidden;
+                    .amount__group {
+                        display: flex;
+                        gap: 0.5rem;
+                        div ul {
+                            .placeholder {
+                                height: $details-font-size +
+                                    calc($details-font-size / 2);
+                            }
+
+                            li {
+                                @include details-font-props;
+
+                                img {
+                                    height: $details-font-size +
+                                        calc($details-font-size / 2);
+                                }
+                            }
+                        }
+                    }
+
+                    p {
+                        @include details-font-props($font-size: 16px);
+                        position: relative;
+                        transform: translateY(calc($details-font-size / 2));
+                    }
+                }
+
+                p {
+                    text-wrap: nowrap;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .info__product {
+        img {
+            position: absolute;
+        }
+    }
+}
