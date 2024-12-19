@@ -6,12 +6,14 @@ import partner2 from "../../assets/images/partner2.png";
 import banner1 from "../../assets/images/banner1.png";
 import banner2 from "../../assets/images/banner2.png";
 
+import ButtonPrimary from "../Button-primary/Button-primary";
+
 function Banner() {
     return (
         <>
             <div className="banner-wrapper">
                 <div className="banner-wrapper__info flex">
-                    <div className="info__text flex flex-col flex-1">
+                    <div className="info__text flex flex-col flex-1 justify-center">
                         <h1>Trusted by Athletes</h1>
                         <p>
                             Integrated with A.I to ensure your massage pressure
@@ -110,7 +112,7 @@ function Banner() {
                                                 <li className="placeholder"></li>
                                                 <li className="placeholder"></li>
                                                 <li className="placeholder"></li>
-                                                <li>+</li>
+                                                <li className="plus">+</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -299,17 +301,23 @@ function Banner() {
                                 <p>Stars</p>
                             </div>
                         </div>
-                        <button></button>
-                        <p>Buy now, pay later option available</p>
-                        <p>Free Worldwide Express Delivery</p>
-                        <div className="text__partners">
+                        <ButtonPrimary
+                            title="Buy now"
+                            // subtitle="(Risk free 30 day trials)"
+                            className="text__button"
+                        />
+                        <div className="text__description flex flex-col">
+                            <p>Buy now, pay later option available</p>
+                            <p>Free Worldwide Express Delivery</p>
+                        </div>
+                        <div className="text__partners flex">
                             <img src={partner1} alt="partners" />
                             <img src={partner2} alt="partners" />
                         </div>
                     </div>
                     <div className="info__product flex-1">
-                        <img src={banner1} alt="banner" />
                         <img src={banner2} alt="banner" />
+                        <img src={banner1} alt="banner" />
                     </div>
                 </div>
                 <div className="banner-wrapper__extras"></div>

@@ -1,0 +1,31 @@
+.buttonPrimary {
+    width: min-content;
+    padding: 0.75rem 2.25rem;
+    background: #2bf6fa;
+    gap: 5px;
+    transition: box-shadow 0.125s ease, background-color 0.125s ease;
+    h1 {
+        font-family: "Inter", serif;
+        color: black;
+        font-size: 22px;
+        line-height: 22px;
+        font-weight: bold;
+        text-wrap: nowrap;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 10px;
+        text-wrap: nowrap;
+        color: black;
+        font-weight: bold;
+        line-height: 10px;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 10px 0px #2bf6fa;
+    }
+
+    &:active {
+        background: #26d0d3;
+    }
+}
