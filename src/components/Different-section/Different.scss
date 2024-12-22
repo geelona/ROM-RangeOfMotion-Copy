@@ -1,0 +1,52 @@
+.different-wrapper {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    & > div {
+        align-self: flex-end;
+        width: 656px;
+    }
+
+    .different-wrapper__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        & > h1 {
+            font-family: "PeckhamPress";
+            font-size: 40px;
+        }
+
+        .content__points {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .points__point {
+                display: flex;
+                flex-direction: row;
+                flex: 1 1 calc(50% - 20px);
+                box-sizing: border-box;
+                align-items: center;
+                gap: 10px;
+                height: 50px;
+
+                & > p {
+                    width: 250px;
+                    letter-spacing: 2%;
+                }
+
+                &:nth-child(8) {
+                    align-items: start;
+
+                    & > p span {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

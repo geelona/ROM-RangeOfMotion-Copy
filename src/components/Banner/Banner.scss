@@ -7,6 +7,20 @@ $details-font-size: 34px;
     color: white;
 }
 
+.banner-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    & > h1 {
+        color: #191919;
+        font-family: "PeckhamPress";
+        font-size: 107px;
+        letter-spacing: 2%;
+    }
+}
+
 .banner-wrapper__info {
     .info__text {
         gap: 40px;
@@ -136,6 +150,12 @@ $details-font-size: 34px;
             top: 0;
         }
     }
+}
+
+.banner-wrapper__whatIsItAbout {
+    display: flex;
+    align-items: center;
+    gap: 80px;
 }
 
 @keyframes slideUpAnimation {

@@ -1,10 +1,13 @@
 import "./Banner.scss";
 
-import star from "../../assets/images/star.png";
-import partner1 from "../../assets/images/partner1.png";
-import partner2 from "../../assets/images/partner2.png";
-import banner1 from "../../assets/images/banner1.png";
-import banner2 from "../../assets/images/banner2.png";
+import star from "../../assets/images/banner-section/star.png";
+import partner1 from "../../assets/images/banner-section/partner1.png";
+import partner2 from "../../assets/images/banner-section/partner2.png";
+import banner1 from "../../assets/images/banner-section/banner1.png";
+import banner2 from "../../assets/images/banner-section/banner2.png";
+import whatIsItAbout1 from "../../assets/images/banner-section/whatIsItAbout1.png";
+import whatIsItAbout2 from "../../assets/images/banner-section/whatIsItAbout2.png";
+import whatIsItAbout3 from "../../assets/images/banner-section/whatIsItAbout3.png";
 
 import ButtonPrimary from "../Button-primary/Button-primary";
 
@@ -320,7 +323,12 @@ function Banner() {
                         <img src={banner1} alt="banner" />
                     </div>
                 </div>
-                <div className="banner-wrapper__extras"></div>
+                <div className="banner-wrapper__whatIsItAbout">
+                    <img src={whatIsItAbout1} alt="what is it about.." />
+                    <img src={whatIsItAbout2} alt="what is it about.." />
+                    <img src={whatIsItAbout3} alt="what is it about.." />
+                </div>
+                <h1>Massage Gun</h1>
             </div>
         </>
     );
