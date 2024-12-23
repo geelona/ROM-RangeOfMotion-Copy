@@ -1,0 +1,28 @@
+.benefit-wrapper {
+    margin-top: 80px;
+    gap: 40px;
+
+    .wrapper__info {
+        gap: 60px;
+        & > h1 {
+            font-family: "PeckhamPress";
+            font-size: 50px;
+            letter-spacing: 2%;
+            line-height: 124%;
+        }
+
+        .info__points {
+            gap: 20px;
+            .points__point {
+                display: flex;
+                align-items: center;
+                flex: 1 1 calc(50% - 20px);
+                gap: 10px;
+                & > p {
+                    color: #808080;
+                    width: 260px;
+                }
+            }
+        }
+    }
+}
