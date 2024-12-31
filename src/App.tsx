@@ -3,6 +3,7 @@ import Logo from "./components/Logo/Logo";
 import Banner from "./components/Banner/Banner";
 import Different from "./components/Different-section/Different";
 import Benefit from "./components/Benefit-section/Benefit-section";
+import Carousel from "./components/Carousel-section/Carousel";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
                 <Banner />
                 <Different />
                 <Benefit />
+                <Carousel />
             </div>
         </div>
     );

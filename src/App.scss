@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 
     .wrapper__container {
         max-width: 1440px;
