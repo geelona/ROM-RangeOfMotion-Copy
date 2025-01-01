@@ -13,8 +13,10 @@ import point9 from "../../assets/images/different-section/point9.png";
 function Different() {
     return (
         <>
-            <div className="different-wrapper">
-                <img src={image} alt="image" />
+            <div className="different-wrapper flex justify-between items-center">
+                <div className="different-wrapper__image">
+                    <img src={image} alt="image" />
+                </div>
                 <div className="different-wrapper__content">
                     <h1>What makes this gun different from the rest</h1>
                     <div className="content__points">

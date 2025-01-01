@@ -1,19 +1,16 @@
 .different-wrapper {
     margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     gap: 40px;
 
     & > div {
-        align-self: flex-end;
-        width: 656px;
+        max-width: 656px;
     }
 
     .different-wrapper__content {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        flex: 3;
         & > h1 {
             font-family: "PeckhamPress";
             font-size: 40px;
@@ -49,5 +46,9 @@
                 }
             }
         }
+    }
+
+    .different-wrapper__image {
+        flex: 1;
     }
 }

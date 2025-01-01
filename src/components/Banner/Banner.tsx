@@ -3,8 +3,7 @@ import "./Banner.scss";
 import star from "../../assets/images/banner-section/star.png";
 import partner1 from "../../assets/images/banner-section/partner1.png";
 import partner2 from "../../assets/images/banner-section/partner2.png";
-import banner1 from "../../assets/images/banner-section/banner1.png";
-import banner2 from "../../assets/images/banner-section/banner2.png";
+import banner from "../../assets/images/banner-section/banner.png";
 import whatIsItAbout1 from "../../assets/images/banner-section/whatIsItAbout1.png";
 import whatIsItAbout2 from "../../assets/images/banner-section/whatIsItAbout2.png";
 import whatIsItAbout3 from "../../assets/images/banner-section/whatIsItAbout3.png";
@@ -15,7 +14,7 @@ function Banner() {
     return (
         <>
             <div className="banner-wrapper">
-                <div className="banner-wrapper__info flex">
+                <div className="banner-wrapper__info flex items-center">
                     <div className="info__text flex flex-col flex-1 justify-center">
                         <h1>Trusted by Athletes</h1>
                         <p>
@@ -319,8 +318,7 @@ function Banner() {
                         </div>
                     </div>
                     <div className="info__product flex-1">
-                        <img src={banner2} alt="banner" />
-                        <img src={banner1} alt="banner" />
+                        <img src={banner} alt="banner" />
                     </div>
                 </div>
                 <div className="banner-wrapper__whatIsItAbout">

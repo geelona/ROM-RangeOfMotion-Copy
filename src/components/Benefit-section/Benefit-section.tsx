@@ -12,7 +12,7 @@ import image from "../../assets/images/benefit-section/image.png";
 function Benefit() {
     return (
         <>
-            <div className="benefit-wrapper flex justify-between items-center">
+            <div className="benefit-wrapper flex items-center">
                 <div className="wrapper__info flex flex-col">
                     <h1>The Benefits</h1>
                     <div className="info__points flex flex-wrap">
@@ -55,7 +55,9 @@ function Benefit() {
                         </div>
                     </div>
                 </div>
-                <img src={image} alt="product image" />
+                <div className="wrapper__image flex justify-end">
+                    <img src={image} alt="product image" />
+                </div>
             </div>
         </>
     );

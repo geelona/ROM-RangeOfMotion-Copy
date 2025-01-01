@@ -1,6 +1,8 @@
 .include-wrapper {
     padding: 60px 0;
+    gap: 40px;
     .include-wrapper__content {
+        flex: 3;
         max-width: 539px;
         gap: 20px;
         h1 {
@@ -15,5 +17,8 @@
                 font-size: 20px;
             }
         }
+    }
+    .include-wrapper__image {
+        flex: 1;
     }
 }

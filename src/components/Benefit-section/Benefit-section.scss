@@ -3,6 +3,8 @@
     gap: 40px;
 
     .wrapper__info {
+        flex: 3;
+        max-width: 661px;
         gap: 60px;
         & > h1 {
             font-family: "PeckhamPress";
@@ -24,5 +26,9 @@
                 }
             }
         }
+    }
+
+    .wrapper__image {
+        flex: 1;
     }
 }
