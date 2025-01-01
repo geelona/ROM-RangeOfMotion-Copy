@@ -4,6 +4,7 @@ import Banner from "./components/Banner/Banner";
 import Different from "./components/Different-section/Different";
 import Benefit from "./components/Benefit-section/Benefit-section";
 import Carousel from "./components/Carousel-section/Carousel";
+import Include from "./components/Include-section/Include";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 <Different />
                 <Benefit />
                 <Carousel />
+                <Include />
             </div>
         </div>
     );

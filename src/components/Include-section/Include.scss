@@ -1,0 +1,19 @@
+.include-wrapper {
+    padding: 60px 0;
+    .include-wrapper__content {
+        max-width: 539px;
+        gap: 20px;
+        h1 {
+            font-family: "PeckhamPress";
+            font-size: 40px;
+        }
+        ul {
+            list-style-type: disc;
+            padding: 30px;
+            li {
+                color: #808080;
+                font-size: 20px;
+            }
+        }
+    }
+}
