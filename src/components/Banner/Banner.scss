@@ -1,4 +1,4 @@
-$details-font-size: 34px;
+$details-font-size: 2.125rem;
 
 @mixin details-font-props($font-size: $details-font-size, $font-weight: bold) {
     font-family: "Inter", sans-serif;
@@ -16,8 +16,9 @@ $details-font-size: 34px;
     & > h1 {
         color: #191919;
         font-family: "PeckhamPress";
-        font-size: 107px;
+        font-size: 6.6875rem;
         letter-spacing: 2%;
+        text-wrap: nowrap;
     }
 }
 
@@ -27,7 +28,7 @@ $details-font-size: 34px;
         flex: 1;
         & > h1 {
             font-family: "PeckhamPress";
-            font-size: 58px;
+            font-size: 3.625rem;
             line-height: 107%;
             transform: translateY(100px);
             opacity: 0;
@@ -93,7 +94,7 @@ $details-font-size: 34px;
                     }
 
                     p {
-                        @include details-font-props($font-size: 16px);
+                        @include details-font-props($font-size: 1rem);
                         position: relative;
                         transform: translateY(calc($details-font-size / 2));
                         left: -15px;
