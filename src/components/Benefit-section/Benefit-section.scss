@@ -1,14 +1,22 @@
 .benefit-wrapper {
     margin-top: 80px;
     gap: 40px;
+    @media (max-width: 1000px) {
+        gap: 10px;
+    }
 
     .wrapper__info {
-        flex: 3;
+        flex: 2;
         max-width: 661px;
         gap: 60px;
+        @media (max-width: 1000px) {
+            gap: 20px;
+            flex: 1;
+        }
         & > h1 {
             font-family: "PeckhamPress";
-            font-size: 3.125rem;
+            // font-size: 3.125rem;
+            font-size: clamp(calc(3.125 / 2) * 1rem, 3.125 * 1.2vw, 3.125rem);
             letter-spacing: 2%;
             line-height: 124%;
         }

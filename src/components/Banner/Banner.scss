@@ -12,11 +12,14 @@ $details-font-size: 2.125rem;
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    @media (max-width: 1000px) {
+        margin-top: 20px;
+    }
 
     & > h1 {
         color: #191919;
         font-family: "PeckhamPress";
-        font-size: 6.6875rem;
+        font-size: clamp(calc(6.6875 / 2) * 1rem, 6.6875 * 1.2vw, 6.6875rem);
         letter-spacing: 2%;
         text-wrap: nowrap;
     }
@@ -25,10 +28,13 @@ $details-font-size: 2.125rem;
 .banner-wrapper__info {
     .info__text {
         gap: 40px;
-        flex: 1;
+        // responsive till 650px width screen
+        @media (max-width: 1000px) {
+            gap: 20px;
+        }
         & > h1 {
             font-family: "PeckhamPress";
-            font-size: 3.625rem;
+            font-size: clamp(calc(3.625 / 2) * 1rem, 3.625 * 1.21vw, 3.625rem);
             line-height: 107%;
             transform: translateY(100px);
             opacity: 0;
@@ -42,14 +48,21 @@ $details-font-size: 2.125rem;
             transform: translateY(40px);
             opacity: 0;
             animation: slideUpAnimation 1s 0.1s ease-in-out forwards;
+
+            @media (max-width: 1000px) {
+                max-width: 100%;
+            }
         }
 
         .text__details {
             gap: 20px;
+            @media (max-width: 1000px) {
+                flex-direction: column;
+                gap: 5px;
+            }
             .details__detail {
                 .amount {
-                    max-height: $details-font-size +
-                        calc($details-font-size / 2);
+                    height: $details-font-size + calc($details-font-size / 2);
                     display: flex;
                     align-items: flex-start;
                     overflow: hidden;
@@ -138,7 +151,6 @@ $details-font-size: 2.125rem;
     }
 
     .info__product {
-        flex: 1;
         opacity: 0;
         animation: productAppearenceAnimation 1s 0.1s ease-in-out forwards;
     }
@@ -148,6 +160,14 @@ $details-font-size: 2.125rem;
     display: flex;
     align-items: center;
     gap: 80px;
+
+    img {
+        width: clamp(100px, 15vw, 150px);
+
+        &:nth-child(2) {
+            width: clamp(150px, 25vw, 250px);
+        }
+    }
 }
 
 @keyframes slideUpAnimation {
