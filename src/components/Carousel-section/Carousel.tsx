@@ -16,7 +16,6 @@ function Carousel() {
     const [canScroll, setCanScroll] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Для хранения состояния перетаскивания
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
     const [currentTranslate, setCurrentTranslate] = useState(0);
@@ -124,7 +123,6 @@ function Carousel() {
                 : event.touches[0].clientX;
         };
 
-        // События тачскрина
         track.addEventListener("touchstart", handleDragStart);
         track.addEventListener("touchmove", handleDragMove);
         track.addEventListener("touchend", handleDragEnd);
