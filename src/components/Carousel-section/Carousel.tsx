@@ -16,6 +16,12 @@ function Carousel() {
     const [canScroll, setCanScroll] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    // Для хранения состояния перетаскивания
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [currentTranslate, setCurrentTranslate] = useState(0);
+    const [prevTranslate, setPrevTranslate] = useState(0);
+
     useEffect(() => {
         const carousel = carouselRef.current;
         const track = trackRef.current;
@@ -72,41 +78,101 @@ function Carousel() {
             }, 1200);
         };
 
+        const handleDragStart = (event: MouseEvent | TouchEvent) => {
+            setIsDragging(true);
+            setStartX(getPositionX(event));
+            setPrevTranslate(-currentIndex * carousel.offsetWidth);
+        };
+
+        const handleDragMove = (event: MouseEvent | TouchEvent) => {
+            if (!isDragging) return;
+            const currentPosition = getPositionX(event);
+            const movement = currentPosition - startX;
+            setCurrentTranslate(prevTranslate + movement);
+            track.style.transform = `translateX(${currentTranslate}px)`;
+        };
+
+        const handleDragEnd = () => {
+            if (!isDragging) return;
+            setIsDragging(false);
+
+            const moveBy = currentTranslate - prevTranslate;
+            const direction = moveBy > 100 ? -1 : moveBy < -100 ? 1 : 0;
+
+            const newIndex = Math.max(
+                0,
+                Math.min(currentIndex + direction, maxIndex)
+            );
+
+            const previousActiveDot =
+                dotsRef.current?.getElementsByClassName("dots__dot--active")[0];
+            const currentActiveDot = dotsRef.current?.querySelector(
+                `#dot${newIndex}`
+            );
+            previousActiveDot?.classList.remove("dots__dot--active");
+            currentActiveDot?.classList.add("dots__dot--active");
+
+            setCurrentIndex(newIndex);
+            setCurrentTranslate(-newIndex * carousel.offsetWidth);
+            setPrevTranslate(-newIndex * carousel.offsetWidth);
+            track.style.transform = `translateX(${-newIndex * 100}%)`;
+        };
+
+        const getPositionX = (event: MouseEvent | TouchEvent): number => {
+            return event instanceof MouseEvent
+                ? event.clientX
+                : event.touches[0].clientX;
+        };
+
+        // События тачскрина
+        track.addEventListener("touchstart", handleDragStart);
+        track.addEventListener("touchmove", handleDragMove);
+        track.addEventListener("touchend", handleDragEnd);
+
         carousel.addEventListener("wheel", handleWheel);
 
         return () => {
+            track.removeEventListener("touchstart", handleDragStart);
+            track.removeEventListener("touchmove", handleDragMove);
+            track.removeEventListener("touchend", handleDragEnd);
+
             carousel.removeEventListener("wheel", handleWheel);
         };
-    }, [canScroll, currentIndex]);
+    }, [
+        canScroll,
+        currentIndex,
+        isDragging,
+        startX,
+        currentTranslate,
+        prevTranslate,
+    ]);
 
     return (
-        <>
-            <div className="carousel-wrapper">
-                <div ref={dotsRef} className="carousel-wrapper__dots"></div>
-                <div ref={carouselRef} className="carousel-wrapper__carousel">
-                    <div ref={trackRef} className="carousel__track flex">
-                        <div className="track__el">
-                            <img src={image1} alt="image" />
-                        </div>
-                        <div className="track__el">
-                            <img src={image2} alt="image" />
-                        </div>
-                        <div className="track__el">
-                            <img src={image3} alt="image" />
-                        </div>
-                        <div className="track__el">
-                            <img src={image4} alt="image" />
-                        </div>
-                        <div className="track__el">
-                            <img src={image5} alt="image" />
-                        </div>
-                        <div className="track__el">
-                            <img src={image6} alt="image" />
-                        </div>
+        <div className="carousel-wrapper">
+            <div ref={dotsRef} className="carousel-wrapper__dots"></div>
+            <div ref={carouselRef} className="carousel-wrapper__carousel">
+                <div ref={trackRef} className="carousel__track flex">
+                    <div className="track__el">
+                        <img src={image1} alt="image" />
+                    </div>
+                    <div className="track__el">
+                        <img src={image2} alt="image" />
+                    </div>
+                    <div className="track__el">
+                        <img src={image3} alt="image" />
+                    </div>
+                    <div className="track__el">
+                        <img src={image4} alt="image" />
+                    </div>
+                    <div className="track__el">
+                        <img src={image5} alt="image" />
+                    </div>
+                    <div className="track__el">
+                        <img src={image6} alt="image" />
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 
