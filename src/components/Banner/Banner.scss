@@ -11,7 +11,7 @@ $details-font-size: 2.125rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: clamp(10px, 3vw, 40px);
     @media (max-width: 1000px) {
         margin-top: 20px;
     }
@@ -19,7 +19,7 @@ $details-font-size: 2.125rem;
     & > h1 {
         color: #191919;
         font-family: "PeckhamPress";
-        font-size: clamp(calc(6.6875 / 2) * 1rem, 6.6875 * 1.2vw, 6.6875rem);
+        font-size: clamp(1.5rem, 6.6875 * 1.2vw, 6.6875rem);
         letter-spacing: 2%;
         text-wrap: nowrap;
     }
@@ -28,6 +28,7 @@ $details-font-size: 2.125rem;
 .banner-wrapper__info {
     .info__text {
         gap: 40px;
+        z-index: 2;
         // responsive till 650px width screen
         @media (max-width: 1000px) {
             gap: 20px;
@@ -145,7 +146,8 @@ $details-font-size: 2.125rem;
             gap: 10px;
 
             img {
-                height: 40px;
+                object-fit: contain;
+                height: min(40px, 10vw);
             }
         }
     }
@@ -153,19 +155,28 @@ $details-font-size: 2.125rem;
     .info__product {
         opacity: 0;
         animation: productAppearenceAnimation 1s 0.1s ease-in-out forwards;
+
+        @media (max-width: 600px) {
+            position: absolute;
+            z-index: 1;
+
+            img {
+                opacity: 0.25;
+            }
+        }
     }
 }
 
 .banner-wrapper__whatIsItAbout {
     display: flex;
     align-items: center;
-    gap: 80px;
+    gap: clamp(10px, 6vw, 80px);
 
     img {
-        width: clamp(100px, 15vw, 150px);
+        width: clamp(50px, 15vw, 150px);
 
         &:nth-child(2) {
-            width: clamp(150px, 25vw, 250px);
+            width: clamp(75px, 25vw, 250px);
         }
     }
 }

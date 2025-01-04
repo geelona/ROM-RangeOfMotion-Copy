@@ -1,6 +1,9 @@
 .include-wrapper {
-    padding: 60px 0;
+    margin-top: 60px;
     gap: 40px;
+    @media (max-width: 600px) {
+        margin-top: 40px;
+    }
     .include-wrapper__content {
         flex: 2;
         max-width: 539px;
@@ -24,5 +27,17 @@
     }
     .include-wrapper__image {
         flex: 1;
+
+        @media (max-width: 600px) {
+            position: absolute;
+            right: 0;
+
+            img {
+                opacity: 0.25;
+                align-self: center;
+                max-width: 400px;
+                width: 100vw;
+            }
+        }
     }
 }

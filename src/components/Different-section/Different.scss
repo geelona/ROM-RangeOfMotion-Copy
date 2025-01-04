@@ -4,6 +4,7 @@
 
     @media (max-width: 1000px) {
         gap: 10px;
+        margin-top: 20px;
     }
 
     & > div {
@@ -63,5 +64,12 @@
 
     .different-wrapper__image {
         flex: 1;
+        @media (max-width: 600px) {
+            position: absolute;
+
+            img {
+                opacity: 0.25;
+            }
+        }
     }
 }

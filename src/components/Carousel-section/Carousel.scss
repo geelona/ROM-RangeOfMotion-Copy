@@ -13,6 +13,9 @@
     //     background-color: #1b1b1b;
     //     z-index: -1;
     // }
+    @media (max-width: 600px) {
+        margin-top: 40px;
+    }
     .carousel-wrapper__dots {
         position: absolute;
         bottom: 5%;
@@ -27,6 +30,11 @@
             height: 10px;
             border-radius: 50%;
             background: #808080;
+
+            @media (max-width: 600px) {
+                width: 5px;
+                height: 5px;
+            }
         }
         .dots__dot--active {
             background-color: #2bf6fa;
