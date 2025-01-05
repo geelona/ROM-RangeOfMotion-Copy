@@ -1,0 +1,44 @@
+.recovery-wrapper {
+    margin-top: 40px;
+    position: relative;
+    .recovery-wrapper__background {
+        position: relative;
+        img {
+            &:nth-child(2) {
+                position: absolute;
+                top: 0;
+                left: 10%;
+                height: 100%;
+            }
+
+            &:nth-child(3) {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+
+    .recovery-wrapper__conent {
+        position: absolute;
+        top: 50%;
+        left: 9%;
+        transform: translatey(-50%);
+
+        @media (max-width: 600px) {
+            left: 2%;
+        }
+
+        p {
+            font-family: "PeckhamPress";
+            font-size: clamp(1.3rem, 5vw, 75px);
+            line-height: clamp(1.3rem, 5vw, 75px);
+
+            &:nth-child(1),
+            &:nth-child(3) {
+                color: transparent;
+                -webkit-text-stroke: 0.5px white;
+            }
+        }
+    }
+}

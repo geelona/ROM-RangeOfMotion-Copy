@@ -5,6 +5,7 @@ import Different from "./components/Different-section/Different";
 import Benefit from "./components/Benefit-section/Benefit-section";
 import Carousel from "./components/Carousel-section/Carousel";
 import Include from "./components/Include-section/Include";
+import Recovery from "./components/Recovery-section/recovery";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Benefit />
                 <Carousel />
                 <Include />
+                <Recovery />
             </div>
         </div>
     );
