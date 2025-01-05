@@ -1,4 +1,4 @@
-import "./recovery.scss";
+import "./Recovery.scss";
 import background from "../../assets/images/recovery-section/background.png";
 import background2 from "../../assets/images/recovery-section/background2.png";
 import image from "../../assets/images/recovery-section/image.png";
