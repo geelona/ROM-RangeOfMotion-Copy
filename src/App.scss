@@ -6,6 +6,10 @@
     align-items: center;
     overflow-x: hidden;
 
+    @media (max-width: 600px) {
+        padding: 2rem 0;
+    }
+
     .wrapper__container {
         max-width: 1440px;
         padding: 0 4rem;
