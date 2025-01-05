@@ -11,6 +11,10 @@ import whatIsItAbout3 from "../../assets/images/banner-section/whatIsItAbout3.pn
 import ButtonPrimary from "../Button-primary/Button-primary";
 
 function Banner() {
+    function onBuy() {
+        alert("buy product button pressed");
+    }
+
     return (
         <>
             <div className="banner-wrapper">
@@ -307,6 +311,7 @@ function Banner() {
                             title="Buy now"
                             // subtitle="(Risk free 30 day trials)"
                             className="text__button"
+                            func={onBuy}
                         />
                         <div className="text__description flex flex-col">
                             <p>Buy now, pay later option available</p>
