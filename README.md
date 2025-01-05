@@ -31,6 +31,14 @@ To start the project in development mode, run:
    http://localhost:5173
    ```
 
+# Technologies Used
+- React
+- Vite
+- CSS/SCSS
+- TypeScript
+- Thailwind CSS
+[Add other libraries or tools here]
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
