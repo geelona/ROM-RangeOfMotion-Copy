@@ -1,4 +1,4 @@
-#To get started with this project, follow these steps:
+# To get started with this project, follow these steps:
 
 1. Clone the repository:
    ```bash
@@ -17,7 +17,7 @@
    yarn install
    ```
 
-#Usage:
+# Usage:
 To start the project in development mode, run:
    ```bash
    npm run dev
