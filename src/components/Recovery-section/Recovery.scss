@@ -40,5 +40,15 @@
                 -webkit-text-stroke: 0.5px white;
             }
         }
+
+        div {
+            width: 30%;
+            height: clamp(0.65rem, 5vw, 37.5px);
+            border-bottom: 4px solid white;
+
+            @media (max-width: 600px) {
+                border-bottom: 2px solid white;
+            }
+        }
     }
 }
