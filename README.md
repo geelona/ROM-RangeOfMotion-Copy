@@ -37,7 +37,6 @@ To start the project in development mode, run:
 - CSS/SCSS
 - TypeScript
 - Thailwind CSS
-[Add other libraries or tools here]
 
 # React + TypeScript + Vite
 
